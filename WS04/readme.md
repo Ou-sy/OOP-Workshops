@@ -100,13 +100,13 @@ Implement two modules (i.e., classes): **Tournament** and **SoccerTeam**
 
 
 ## The SoccerTeam module
-Develop this module in two files named **soccerTeam.h** and **soccerTeam.cpp**. Create a structure named **soccerTeam** and the structure should have the following member variables (attributes) and member functions (method):
-First, define the following constant in the **soccerTeam** header file:
+Develop this module in two files named **SoccerTeam.h** and **SoccerTeam.cpp**. Create a structure named **SoccerTeam** and the structure should have the following member variables (attributes) and member functions (method):
+First, define the following constant in the **SoccerTeam** header file:
 ```
 const int MAX_FOUL = 4; //maximum number of fouls
 ```
 #### member variables(attributes)
-The struct soccerTeam should have the following member variables:
+The struct SoccerTeam should have the following member variables:
 
 ```C++
     char m_teamName[41];// a statically allocated Cstring with size 41. Remember, name could be 
@@ -129,12 +129,12 @@ If the received name pointer is valid and not null it will copy the received nam
 ```c++
 void setFine(double fines, int foul)
 ```
-It will receive the information about fines and no of foul. After checking the validity it will set the values to the appropriate data members. Fine and foul should be grater than and equal to zero. Otherwise, it will set the soccerTeam object to an empty state. 
+It will receive the information about fines and no of foul. After checking the validity it will set the values to the appropriate data members. Fine and foul should be grater than and equal to zero. Otherwise, it will set the SoccerTeam object to an empty state. 
 
 ```C++
 void setEmpty();
 ```
-Sets the **soccerTeam** object to an Empty State. Do this by setting the **m_teamName** to an empty Cstring, **m_noFoul** and **m_fines** to a negative number and **m_goals** to **0**.
+Sets the **SoccerTeam** object to an Empty State. Do this by setting the **m_teamName** to an empty Cstring, **m_noFoul** and **m_fines** to a negative number and **m_goals** to **0**.
 
 ```C++
 bool isEmpty() const;
@@ -151,11 +151,11 @@ int fouls() const ;
 ```
 It will return the m_noFoul
 
-#### A **soccerTeam** can be created in two different ways:
+#### A **SoccerTeam** can be created in two different ways:
 ```C++
-soccerTeam();
+SoccerTeam();
 ```
-- By default a **soccerTeam** is set to the empty state (as in setEmpty())
+- By default a **SoccerTeam** is set to the empty state (as in setEmpty())
 
 ###### Three argument constructor
 ```C++
@@ -166,7 +166,7 @@ SoccerTeam(const char* tname, double fines, int foul);
 ```C++
 std::ostream& display()const;
 ```
-1) If a soccerTeam object is valid
+1) If a SoccerTeam object is valid
 
      a) prints  **m_teamName** with width 30, left justified and fill with empty spaces.
      
@@ -189,7 +189,7 @@ The class should have the following private member variables:
 ```C++
     char* m_name;//points to a dynamically allocated Cstring
     int m_num;//size of the dynamically allocated array of soccer team. It should be more then zero.
-    SoccerTeam* m_soccer=nullptr;//pointer to the dynamically allocated array of soccerTeam
+    SoccerTeam* m_soccer=nullptr;//pointer to the dynamically allocated array of SoccerTeam
 ```
 #### Public member functions(methods)
 ```C++
